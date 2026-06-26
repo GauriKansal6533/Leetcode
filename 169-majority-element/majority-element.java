@@ -13,7 +13,19 @@ class Solution {
                 freq--;
             }
         }
-        return ans;
+        int cnt=0;
+        for(int i=0; i<n; i++){
+            if(nums[i]==ans){
+                cnt++;
+            }
+            
+        }
+        if(cnt>(n/2)){
+                return ans;
+            }
+            else{
+                return -1;
+            }
         
     }
 }
