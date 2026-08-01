@@ -11,6 +11,9 @@ class Solution {
         dfs(image,i,j-1,newColor,orgColor);
     }
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
+        if(image[sr][sc]==color){
+            return image;
+        }
         dfs(image,sr,sc,color,image[sr][sc]);
         return image;
        
